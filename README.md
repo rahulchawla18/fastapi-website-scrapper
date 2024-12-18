@@ -16,40 +16,40 @@ A robust web scrapper built with FastAPI that extracts product information (titl
 
 # Installation
 - Clone the repository:
-  git clone https://github.com/your-username/fastapi-website-scrapper.git
-  cd fastapi-website-scrapper
+  - git clone https://github.com/rahulchawla18/fastapi-website-scrapper.git
+  - cd fastapi-website-scrapper
 
 - Create a virtual environment and activate it:
-  python -m venv myenv
-  On Windows: myenv\Scripts\activate
+  - python -m venv myenv
+  - On Windows: myenv\Scripts\activate
 
 - Install the dependencies:
-  pip install -r requirements.txt
-  (Optional) Set up a .env file with sensitive data
+  - pip install -r requirements.txt
+  - (Optional) Set up a .env file with sensitive data
 
 # Running the Application
 - Start the FastAPI server:
-  uvicorn app.main:app --reload
+  - uvicorn app.main:app --reload
 
 - The API will be available at:
-  http://127.0.0.1:8000
+  - http://127.0.0.1:8000
 
 - API Endpoints:
-  /scrape/ (POST)
-  Description: Initiates the scraping process for a given number of pages.
-  Headers:
-    Authorization: Bearer token to secure the endpoint.
-    Request Body:
-     {
-       "pages": 5,
-       "proxy": "http://your-proxy-url:port"
-     }
-      pages: Number of pages to scrape.
-      proxy: (Optional) Proxy URL for web requests.
-    Response:
-     {
-       "message": "Scraped 50 products from 5 pages."
-     }
+  - /scrape/ (POST)
+  - Description: Initiates the scraping process for a given number of pages.
+  - Headers:
+    - Authorization: Bearer token to secure the endpoint.
+    - Request Body:
+        {
+            "pages": 5,
+            "proxy": "http://your-proxy-url:port"
+        }
+      - pages: Number of pages to scrape.
+      - proxy: (Optional) Proxy URL for web requests.
+    - Response:
+        {
+            "message": "Scraped 50 products from 5 pages."
+        }
     
 # Logging
 - Logs are generated during the scraping process to help debug issues.
@@ -58,11 +58,11 @@ A robust web scrapper built with FastAPI that extracts product information (titl
 
 # Troubleshooting
 - 403 Unauthorized:
-  Ensure the Authorization header matches Config.API_TOKEN.
-  Check for typos in the token.
+  - Ensure the Authorization header matches Config.API_TOKEN.
+  - Check for typos in the token.
 
 - AttributeError:
-  Verify that the target website's structure matches the selectors in scraper.py.
+  - Verify that the target website's structure matches the selectors in scraper.py.
 
 - Proxy Issues:
-  Confirm your proxy is active and correctly configured.
+  - Confirm your proxy is active and correctly configured.
